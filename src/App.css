@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.book {
+  margin: 1rem;
+  width: 33%;
+}
+
+.book-data-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 787px) {
+  .book {
+    width: 50%;
+    min-width: 285px;
+  }
+}
