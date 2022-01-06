@@ -82,6 +82,8 @@ const SearchForm = ({
     countrySearchText,
     languageSearchText,
     yearSearchText,
+    setFilteredBooks,
+    setIsFiltering
   ]);
 
   return (
