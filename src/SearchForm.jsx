@@ -35,6 +35,14 @@ const SearchForm = ({
     setYearSearchText(e.target.value);
   };
 
+  const handleClearForm = () => {
+    setAuthorSearchText("");
+    setTitleSearchText("");
+    setCountrySearchText("");
+    setLanguageSearchText("");
+    setYearSearchText("");
+  };
+
   useEffect(() => {
     if (
       !authorSearchText &&
@@ -114,6 +122,9 @@ const SearchForm = ({
         <label htmlFor="year">year</label>
         <input type="text" value={yearSearchText} onChange={handleYearChange} />
       </div>
+      <button className="clear-form-btn" onClick={handleClearForm}>
+        Clear Form
+      </button>
     </div>
   );
 };

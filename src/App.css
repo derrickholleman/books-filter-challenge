@@ -10,9 +10,7 @@ h1 {
 .books {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto;
 }
 
 .book {
@@ -35,6 +33,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.clear-form-btn {
+  margin: .5rem auto;
+  padding: .25rem .5rem;
+  width: 6rem;
+  cursor: pointer;
 }
 
 label {
