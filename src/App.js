@@ -5,7 +5,6 @@ import SearchForm from "./SearchForm";
 const booksData = require("./books.json");
 
 function App() {
-  const [books, setBooks] = useState(booksData);
   const [isFiltering, setIsFiltering] = useState(false);
   const [authorSearchText, setAuthorSearchText] = useState("");
   const [titleSearchText, setTitleSearchText] = useState("");
@@ -31,10 +30,11 @@ function App() {
         setYearSearchText={setYearSearchText}
         books={booksData}
       />
-
+      
+      <h1>Total Results: {filteredBooks.length}</h1>
       <div className="books">
         {!isFiltering &&
-          books.map((book, index) => <Book key={index} book={book} />)}
+          booksData.map((book, index) => <Book key={index} book={book} />)}
 
         {filteredBooks.map((book, index) => (
           <Book key={index} book={book} />

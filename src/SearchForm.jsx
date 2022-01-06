@@ -76,8 +76,6 @@ const SearchForm = ({
     yearSearchText,
   ]);
 
-  console.log(authorSearchText);
-
   return (
     <div className="search-form">
       <div>
