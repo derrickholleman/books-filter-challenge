@@ -83,7 +83,7 @@ const SearchForm = ({
     languageSearchText,
     yearSearchText,
     setFilteredBooks,
-    setIsFiltering
+    setIsFiltering,
   ]);
 
   return (
@@ -92,6 +92,7 @@ const SearchForm = ({
         <label htmlFor="author">author</label>
         <input
           type="text"
+          id="author"
           value={authorSearchText}
           onChange={handleAuthorChange}
         />
@@ -100,6 +101,7 @@ const SearchForm = ({
         <label htmlFor="title">title</label>
         <input
           type="text"
+          id="title"
           value={titleSearchText}
           onChange={handleTitleChange}
         />
@@ -108,6 +110,7 @@ const SearchForm = ({
         <label htmlFor="country">country</label>
         <input
           type="text"
+          id="country"
           value={countrySearchText}
           onChange={handleCountryChange}
         />
@@ -116,13 +119,19 @@ const SearchForm = ({
         <label htmlFor="language">language</label>
         <input
           type="text"
+          id="language"
           value={languageSearchText}
           onChange={handleLanguageChange}
         />
       </div>
       <div>
         <label htmlFor="year">year</label>
-        <input type="text" value={yearSearchText} onChange={handleYearChange} />
+        <input
+          type="text"
+          id="year"
+          value={yearSearchText}
+          onChange={handleYearChange}
+        />
       </div>
       <button className="clear-form-btn" onClick={handleClearForm}>
         Clear Form
